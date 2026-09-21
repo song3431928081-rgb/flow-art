@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#060410">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Flow Art — Touch the Fluid</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game"></canvas>
+
+  <!-- Top Bar -->
+  <div id="topBar">
+    <div class="app-title">FLOW ART</div>
+    <button id="btnSettings" class="icon-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 10v6m11-11h-6M7 12H1m17.07-7.07l-4.24 4.24M9.17 14.83l-4.24 4.24m0-14.14l4.24 4.24m5.66 5.66l4.24 4.24"/></svg>
+    </button>
+  </div>
+
+  <!-- Scene Dots -->
+  <div id="sceneDots"></div>
+
+  <!-- Hint -->
+  <div id="hint"></div>
+
+  <!-- Settings Panel -->
+  <div id="settingsPanel" class="settings-panel hidden">
+    <div class="settings-content">
+      <div class="settings-header">
+        <span class="settings-title">Flow Art</span>
+        <button id="btnCloseSettings" class="icon-btn-sm">✕</button>
+      </div>
+      <div class="setting-group">
+        <label class="setting-label">Vibration <span id="vibVal" class="val-badge">ON</span></label>
+        <div class="toggle-row">
+          <button id="btnVibOn" class="toggle-btn active">ON</button>
+          <button id="btnVibOff" class="toggle-btn">OFF</button>
+        </div>
+      </div>
+      <div class="setting-group">
+        <label class="setting-label">ASMR Sound <span id="sndVal" class="val-badge">ON</span></label>
+        <div class="toggle-row">
+          <button id="btnSndOn" class="toggle-btn active">ON</button>
+          <button id="btnSndOff" class="toggle-btn">OFF</button>
+        </div>
+      </div>
+      <div class="setting-divider"></div>
+      <div class="setting-group">
+        <label class="setting-label">Scenes — Swipe ← →</label>
+        <div class="scene-list" id="sceneList"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
