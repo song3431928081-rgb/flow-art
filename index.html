@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#060410">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Flow Art — Touch the Fluid</title>
+<title>Flow Art</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -34,6 +34,20 @@
         <span class="settings-title">Flow Art</span>
         <button id="btnCloseSettings" class="icon-btn-sm">✕</button>
       </div>
+
+      <!-- Wave Speed -->
+      <div class="setting-group">
+        <label class="setting-label">Wave Speed <span id="speedVal" class="val-badge">Normal</span></label>
+        <div class="toggle-row toggle-row-3">
+          <button id="btnSpeedSlow" class="toggle-btn speed-btn">Slow</button>
+          <button id="btnSpeedNormal" class="toggle-btn speed-btn active">Normal</button>
+          <button id="btnSpeedFast" class="toggle-btn speed-btn">Fast</button>
+        </div>
+      </div>
+
+      <div class="setting-divider"></div>
+
+      <!-- Vibration -->
       <div class="setting-group">
         <label class="setting-label">Vibration <span id="vibVal" class="val-badge">ON</span></label>
         <div class="toggle-row">
@@ -41,6 +55,8 @@
           <button id="btnVibOff" class="toggle-btn">OFF</button>
         </div>
       </div>
+
+      <!-- Sound -->
       <div class="setting-group">
         <label class="setting-label">ASMR Sound <span id="sndVal" class="val-badge">ON</span></label>
         <div class="toggle-row">
@@ -48,9 +64,26 @@
           <button id="btnSndOff" class="toggle-btn">OFF</button>
         </div>
       </div>
+
       <div class="setting-divider"></div>
+
+      <!-- Interaction Guide -->
       <div class="setting-group">
-        <label class="setting-label">Scenes — Swipe ← →</label>
+        <label class="setting-label">Interactions</label>
+        <div class="interaction-guide">
+          <div class="guide-item"><span class="guide-icon">●</span><span class="guide-text">Tap — Ripple</span></div>
+          <div class="guide-item"><span class="guide-icon">→</span><span class="guide-text">Drag — Flow</span></div>
+          <div class="guide-item"><span class="guide-icon">⊙</span><span class="guide-text">Pinch — Shockwave</span></div>
+          <div class="guide-item"><span class="guide-icon">∞</span><span class="guide-text">Hold — Vibration</span></div>
+          <div class="guide-item"><span class="guide-icon">⇄</span><span class="guide-text">Swipe — Switch Scene</span></div>
+        </div>
+      </div>
+
+      <div class="setting-divider"></div>
+
+      <!-- Scenes -->
+      <div class="setting-group">
+        <label class="setting-label">Scenes</label>
         <div class="scene-list" id="sceneList"></div>
       </div>
     </div>
