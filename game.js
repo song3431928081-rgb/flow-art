@@ -587,9 +587,10 @@ function updateAmbientParticles(dt) {
     if (p.y < -10) p.y = H + 10;
     if (p.y > H + 10) p.y = -10;
   }
-  if (Math.random() < 0.006) {
+  if (ambientParticles.length > 0 && Math.random() < 0.006) {
     var idx = (Math.random() * ambientParticles.length) | 0;
-    ambientParticles[idx].color = sampleColorAt(ambientParticles[idx].x, ambientParticles[idx].y);
+    var ap = ambientParticles[idx];
+    if (ap) ap.color = sampleColorAt(ap.x, ap.y);
   }
 }
 
